@@ -1,5 +1,4 @@
 package com.arrays
-
 import java.util.Scanner
 fun main(args:Array<String>){
     var sc=Scanner(System.`in`)
@@ -15,12 +14,19 @@ fun main(args:Array<String>){
     for(i in 0..(mysize-1) ){
         print(" ${userarr[i]}")
     }
-    var large=-10000
+    var large=-1000
+    var seclarge=-1000
     for(i in 0..(mysize-1)){
         if(userarr[i]>large){
+            seclarge=large
             large=userarr[i]
+        }
+        else{
+            if(userarr[i]>seclarge && userarr[i]<large){
+                seclarge=userarr[i]
+            }
         }
     }
     println()
-    println("The largest element in the array= $large")
+    println("The Second largest element in the array= $seclarge")
 }

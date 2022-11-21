@@ -1,5 +1,4 @@
 package com.arrays
-
 import java.util.Scanner
 fun main(args:Array<String>){
     var sc=Scanner(System.`in`)
@@ -11,16 +10,12 @@ fun main(args:Array<String>){
         println("enter value at $i index")
         userarr.set(i,sc.nextInt())
     }
+     var sum=0
     println("Array is")
     for(i in 0..(mysize-1) ){
         print(" ${userarr[i]}")
-    }
-    var large=-10000
-    for(i in 0..(mysize-1)){
-        if(userarr[i]>large){
-            large=userarr[i]
-        }
+        sum=sum+userarr[i]
     }
     println()
-    println("The largest element in the array= $large")
+    println("The sum of the array elements is $sum")
 }
